@@ -9,8 +9,12 @@ import { PrevisoesService } from './service/previsoes.service';
 })
 export class AppComponent {
   previsoes: Previsao[];
-  constructor(private previsoesService: PrevisoesService){
-    previsoesService.obterPrevisoes().subscribe(previsoes => {
+  city: string = 'itu';
+
+  constructor(private previsoesService: PrevisoesService){}
+
+  enviar() {
+    this.previsoesService.obterPrevisoes(this.city).subscribe(previsoes => {
       this.previsoes = previsoes['list'];
       console.info(this.previsoes);
     });

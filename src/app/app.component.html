@@ -2,8 +2,13 @@
   <h1>Previsão do Tempo</h1>
 </div>
 <div class="container my-3">
+  <div class="form-group text-center mx-auto" style="max-width: 500px">
+    <label for="cityInput">Digite a Cidade que deseja buscar</label>
+    <input [(ngModel)]="city" placeholder="itu" type="text" id="cityInput" class="form-control text-center"/>
+    <button (click)="enviar()" class="mt-2 btn btn-success btn-block">Ver Previsão</button>
+  </div>
   <div class="row">
-    <app-previsao class="d-flex justify-content-center col-12 col-md-4 my-3 mx-auto"
+    <app-previsao class="d-flex justify-content-center col-12 col-md-3 my-3 mx-auto"
       [previsao]="p"
       *ngFor="let p of previsoes"></app-previsao>
   </div>
