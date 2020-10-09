@@ -147,6 +147,12 @@
               "devServerTarget": "angular-previsao-do-tempo:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "/angular-previsao-do-tempo/"
+          }
         }
       }
     }

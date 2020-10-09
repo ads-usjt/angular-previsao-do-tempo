@@ -1,8 +1,12 @@
 export class Previsao {
-  data: string;
-  descricao: string;
-  tempMax: number;
-  tempMin: number;
-  humidity: number;
-  imgURL: string;
+  dt: number;
+  main: {
+    temp_max: number,
+    temp_min: number,
+    humidity: number,
+  };
+  weather: {
+    description: string,
+    icon: string,
+  }[];
 }
